@@ -1,0 +1,56 @@
+<div class="keypad">
+  <div>
+    <div>
+      <button
+        class="functionButtens"
+        *ngIf="getActualyDisplayed()"
+        (click)="onClearDispaly()"
+      >
+        AC
+      </button>
+      <button
+        class="functionButtens"
+        *ngIf="!getActualyDisplayed()"
+        (click)="onClearDispaly()"
+      >
+        C
+      </button>
+      <button class="functionButtens" (click)="onReverseNumber()">±</button>
+      <button class="functionButtens" (click)="onPersentegeNumber()">%</button>
+    </div>
+    <div>
+      <button class="numbers" (click)="onInputDigit(7)">7</button>
+      <button class="numbers" (click)="onInputDigit(8)">8</button>
+      <button class="numbers" (click)="onInputDigit(9)">9</button>
+    </div>
+    <div>
+      <button class="numbers" (click)="onInputDigit(4)">4</button>
+      <button class="numbers" (click)="onInputDigit(5)">5</button>
+      <button class="numbers" (click)="onInputDigit(6)">6</button>
+    </div>
+    <div>
+      <button class="numbers" (click)="onInputDigit(1)">1</button>
+      <button class="numbers" (click)="onInputDigit(2)">2</button>
+      <button class="numbers" (click)="onInputDigit(3)">3</button>
+    </div>
+    <div>
+      <button class="zero" (click)="onInputDigit(0)">0</button>
+      <button class="numbers" (click)="onInputDot()">.</button>
+    </div>
+  </div>
+  <div class="aritmatic">
+    <div class="aritmeticBottuns" (click)="onOperatorOption('÷')">
+      ÷
+    </div>
+    <div class="aritmeticBottuns" (click)="onOperatorOption('×')">
+      ×
+    </div>
+    <div class="aritmeticBottuns" (click)="onOperatorOption('-')">
+      -
+    </div>
+    <div class="aritmeticBottuns" (click)="onOperatorOption('+')">
+      +
+    </div>
+    <div class="aritmeticBottuns" (click)="onCalculate()">=</div>
+  </div>
+</div>

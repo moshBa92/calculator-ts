@@ -1,0 +1,20 @@
+<div class="wrapper">
+  <div class="app">
+    <div class="myconteiner">
+      <div class="display">
+        <div class="input" #input>
+          <div
+          [fittext]="true"
+          [activateOnResize]="true"
+          [maxFontSize]="80"
+          [minFontSize]="0.1"
+          [modelToWatch]="onGetActualyDisplayed()"
+          >
+            <div>{{ onGetActualyDisplayed() }}</div>
+          </div>
+        </div>
+      </div>
+      <app-buttons></app-buttons>
+    </div>
+  </div>
+</div>
